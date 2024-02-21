@@ -1,0 +1,10 @@
+<!-- components/todo-list/todo-list.html -->
+<div>
+    <input type="text" ng-model="todoListCtrl.newTodo" ng-keypress="todoListCtrl.addTodo($event)">
+    <ul>
+        <li ng-repeat="todo in todoListCtrl.todos">
+            {{ todo.text }}
+            <button ng-click="todoListCtrl.removeTodo(todo)">Remove</button>
+        </li>
+    </ul>
+</div>
